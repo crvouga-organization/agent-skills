@@ -50,10 +50,10 @@ npx skills add crvouga/agent-skills --skill pr-green --skill autopilot -a claude
 Add `-g` to install for your user instead of the project. Install autopilot together
 with pr-green; autopilot reads pr-green's workflow from the sibling folder.
 
-**Download.** Each [release](https://github.com/crvouga/agent-skills/releases) has one
+**Download.** Each [release](https://github.com/crvouga-organization/agent-skills/releases) has one
 zip per skill (the format claude.ai accepts as an upload), `agent-skills.tar.gz` with
 every skill, and `SHA256SUMS`. The newest is always at
-`https://github.com/crvouga/agent-skills/releases/latest/download/<skill>.zip`.
+`https://github.com/crvouga-organization/agent-skills/releases/latest/download/<skill>.zip`.
 
 ## Update
 
