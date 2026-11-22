@@ -19,11 +19,11 @@ bundled scripts, references, and sibling skills come along.
 finds pr-green next to it:
 
 ```sh
-claude plugin marketplace add crvouga-organization/agent-skills
+claude plugin marketplace add crvouga/agent-skills
 claude plugin install crvouga-skills@crvouga-skills
 ```
 
-Or inside a session: `/plugin install crvouga-skills --marketplace crvouga-organization/agent-skills`.
+Or inside a session: `/plugin install crvouga-skills --marketplace crvouga/agent-skills`.
 Skills are then named `/crvouga-skills:pr-green` and so on. To give a whole team the
 plugin, commit this to the project's `.claude/settings.json`; each teammate then runs
 the install command above once with `--scope project`:
@@ -31,7 +31,7 @@ the install command above once with `--scope project`:
 ```json
 {
   "extraKnownMarketplaces": {
-    "crvouga-skills": { "source": { "source": "github", "repo": "crvouga-organization/agent-skills" } }
+    "crvouga-skills": { "source": { "source": "github", "repo": "crvouga/agent-skills" } }
   },
   "enabledPlugins": { "crvouga-skills@crvouga-skills": true }
 }
@@ -43,17 +43,17 @@ skills into `.agents/skills/`, links them into `.claude/skills/`, and records th
 in `skills-lock.json`. Commit all three so everyone on the project gets the same skills.
 
 ```sh
-npx skills add crvouga-organization/agent-skills --skill '*' -a claude-code codex -y
-npx skills add crvouga-organization/agent-skills --skill pr-green --skill autopilot -a claude-code codex -y
+npx skills add crvouga/agent-skills --skill '*' -a claude-code codex -y
+npx skills add crvouga/agent-skills --skill pr-green --skill autopilot -a claude-code codex -y
 ```
 
 Add `-g` to install for your user instead of the project. Install autopilot together
 with pr-green; autopilot reads pr-green's workflow from the sibling folder.
 
-**Download.** Each [release](https://github.com/crvouga-organization/agent-skills/releases) has one
+**Download.** Each [release](https://github.com/crvouga/agent-skills/releases) has one
 zip per skill (the format claude.ai accepts as an upload), `agent-skills.tar.gz` with
 every skill, and `SHA256SUMS`. The newest is always at
-`https://github.com/crvouga-organization/agent-skills/releases/latest/download/<skill>.zip`.
+`https://github.com/crvouga/agent-skills/releases/latest/download/<skill>.zip`.
 
 ## Update
 
