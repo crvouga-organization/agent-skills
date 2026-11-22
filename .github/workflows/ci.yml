@@ -25,6 +25,7 @@ env:
 
 jobs:
   validate:
+    timeout-minutes: 30
     name: Validate and test (Python ${{ matrix.python }})
     runs-on: ubuntu-latest
     strategy:
@@ -52,6 +53,7 @@ jobs:
         run: python3 scripts/package_skills.py --out dist
 
   install:
+    timeout-minutes: 30
     name: Install smoke test
     runs-on: ubuntu-latest
     steps:
